@@ -1,0 +1,141 @@
+test
+2017-03-05 16:37:21 begin to get quote data
+600939 already has quote in database.quit 
+600209 already has quote in database.quit 
+603817 already has quote in database.quit 
+000973 already has quote in database.quit 
+603345 already has quote in database.quit 
+002848 already has quote in database.quit 
+300609 already has quote in database.quit 
+603238 already has quote in database.quit 
+300432 already has quote in database.quit 
+002805 already has quote in database.quit 
+300619 already has quote in database.quit 
+300611 already has quote in database.quit 
+300617 already has quote in database.quit 
+603603 already has quote in database.quit 
+300591 already has quote in database.quit 
+603007 already has quote in database.quit 
+603031 already has quote in database.quit 
+002850 already has quote in database.quit 
+600577 already has quote in database.quit 
+300612 already has quote in database.quit 
+300340 already has quote in database.quit 
+002579 already has quote in database.quit 
+300613 already has quote in database.quit 
+300346 already has quote in database.quit 
+300422 already has quote in database.quit 
+002849 already has quote in database.quit 
+300073 already has quote in database.quit 
+603177 already has quote in database.quit 
+300601 already has quote in database.quit 
+300304 already has quote in database.quit 
+600363 already has quote in database.quit 
+002460 already has quote in database.quit 
+300487 already has quote in database.quit 
+600165 already has quote in database.quit 
+002839 already has quote in database.quit 
+300450 already has quote in database.quit 
+300390 already has quote in database.quit 
+300568 already has quote in database.quit 
+603929 already has quote in database.quit 
+002211 already has quote in database.quit 
+600879 already has quote in database.quit 
+300014 already has quote in database.quit 
+002074 already has quote in database.quit 
+002108 already has quote in database.quit 
+002358 already has quote in database.quit 
+300502 already has quote in database.quit 
+300299 already has quote in database.quit 
+603918 already has quote in database.quit 
+603628 already has quote in database.quit 
+300477 already has quote in database.quit 
+002841 already has quote in database.quit 
+002349 already has quote in database.quit 
+000526 already has quote in database.quit 
+000545 already has quote in database.quit 
+600854 already has quote in database.quit 
+300116 already has quote in database.quit 
+300537 already has quote in database.quit 
+300327 already has quote in database.quit 
+300481 already has quote in database.quit 
+002709 already has quote in database.quit 
+002105 already has quote in database.quit 
+600702 already has quote in database.quit 
+002028 already has quote in database.quit 
+000823 already has quote in database.quit 
+002611 already has quote in database.quit 
+002222 already has quote in database.quit 
+300491 already has quote in database.quit 
+300484 already has quote in database.quit 
+002842 already has quote in database.quit 
+300063 already has quote in database.quit 
+600230 already has quote in database.quit 
+603009 already has quote in database.quit 
+000606 already has quote in database.quit 
+300587 already has quote in database.quit 
+002779 already has quote in database.quit 
+002417 already has quote in database.quit 
+002192 already has quote in database.quit 
+603816 already has quote in database.quit 
+002321 already has quote in database.quit 
+002070 already has quote in database.quit 
+300037 already has quote in database.quit 
+600621 already has quote in database.quit 
+300595 already has quote in database.quit 
+002226 already has quote in database.quit 
+002829 already has quote in database.quit 
+002694 already has quote in database.quit 
+300493 already has quote in database.quit 
+600816 already has quote in database.quit 
+300597 already has quote in database.quit 
+000735 already has quote in database.quit 
+603598 already has quote in database.quit 
+300501 already has quote in database.quit 
+002407 already has quote in database.quit 
+300444 already has quote in database.quit 
+30039test
+2017-03-05 22:03:36 begin to get quote data
+600939 already has quote in database.quit 
+600209 already has quote in database.quit 
+603817 already has quote in database.quit 
+000973 already has quote in database.quit 
+603345 already has quote in database.quit 
+002848 already has quote in database.quit 
+300609 already has quote in database.quit 
+603238 already has quote in database.quit 
+300432 already has quote in database.quit 
+002805 already has quote in database.quit 
+300619 already has quote in database.quit 
+300611 already has quote in database.quit 
+300617 already has quote in database.quit 
+603603 already has quote in database.quit 
+300591 already has quote in database.quit 
+603007 already has quote in database.quit 
+603031 already has quote in database.quit 
+002850 already has quote in database.quit 
+600577 already has quote in database.quit 
+300612 already has quote in database.quit 
+300340 already has quote in database.quit 
+002579 already has quote in database.quit 
+300613 already has quote in database.quit 
+300346 already has quote in database.quit 
+300422 already has quote in database.quit 
+002849 already has quote in database.quit 
+300073 already has quote in database.quit 
+603177 already has quote in database.quit 
+300601 already has quote in database.quit 
+300304 already has quote in database.quit 
+Traceback (most recent call last):
+  File "saveQuoteToDb.py", line 20, in <module>
+    hasQuote = co.queryStockCount(stock)
+  File "/Users/momo/Programs/python/tushare/commonUtil.py", line 11, in queryStockCount
+    cur.execute("select count(1) from quote_data_qfq where stock = '" + stock + "'")
+  File "/Library/Python/2.7/site-packages/MySQLdb/cursors.py", line 190, in execute
+    r = self._query(query)
+  File "/Library/Python/2.7/site-packages/MySQLdb/cursors.py", line 354, in _query
+    rowcount = self._do_query(q)
+  File "/Library/Python/2.7/site-packages/MySQLdb/cursors.py", line 318, in _do_query
+    db.query(q)
+KeyboardInterrupt
+Exception _mysql_exceptions.ProgrammingError: (2014, "Commands out of sync; you can't run this command now") in <bound method Cursor.__del__ of <MySQLdb.cursors.Cursor object at 0x10fc46410>> ignored

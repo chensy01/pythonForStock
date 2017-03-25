@@ -1,0 +1,327 @@
+test
+2017-03-25 12:07:32 begin to get quote data
+$$$$$$$$$$$$2017-03-25 12:07:32 begin to get quote data of: 603768$$$$$$$$$$$$$$
+i am getting 2017-03-24 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:07:39 end to get quote data of: 603768   $$$$$$$$$$$$
+$$$$$$$$$$$$2017-03-25 12:07:39 begin to get quote data of: 603388$$$$$$$$$$$$$$
+i am getting 2017-03-24 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:07:40 end to get quote data of: 603388   $$$$$$$$$$$$
+$$$$$$$$$$$$2017-03-25 12:07:40 begin to get quote data of: 300629$$$$$$$$$$$$$$
+i am getting 2017-03-24 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:07:44 end to get quote data of: 300629   $$$$$$$$$$$$
+$$$$$$$$$$$$2017-03-25 12:07:44 begin to get quote data of: 002858$$$$$$$$$$$$$$
+i am getting 2017-03-24 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:07:46 end to get quote data of: 002858   $$$$$$$$$$$$
+$$$$$$$$$$$$2017-03-25 12:07:46 begin to get quote data of: 002774$$$$$$$$$$$$$$
+i am getting 2017-03-24 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:07:48 end to get quote data of: 002774   $$$$$$$$$$$$
+600425 already has quote in database.quit 
+601002 already has quote in database.quit 
+300627 already has quote in database.quit 
+002856 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:07:48 begin to get quote data of: 002857$$$$$$$$$$$$$$
+i am getting 2017-03-23 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:07:58 end to get quote data of: 002857   $$$$$$$$$$$$
+002696 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:07:58 begin to get quote data of: 002246$$$$$$$$$$$$$$
+i am getting 2008-06-05 to 2009-06-05
+[Getting data:]####
+
+i am getting 2009-06-06 to 2010-06-05
+[Getting data:]####
+
+i am getting 2010-06-06 to 2011-06-05
+[Getting data:]####
+
+i am getting 2011-06-06 to 2012-06-04
+[Getting data:]####
+
+i am getting 2012-06-05 to 2013-06-04
+[Getting data:]####
+
+i am getting 2013-06-05 to 2014-06-04
+[Getting data:]####
+
+i am getting 2014-06-05 to 2015-06-04
+[Getting data:]####
+
+i am getting 2015-06-05 to 2016-06-03
+[Getting data:]####
+
+i am getting 2016-06-04 to 2017-03-25
+[Getting data:]###
+
+$$$$$$$$$$$$   2017-03-25 12:09:19 end to get quote data of: 002246   $$$$$$$$$$$$
+300626 already has quote in database.quit 
+603133 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:09:19 begin to get quote data of: 002040$$$$$$$$$$$$$$
+i am getting 2005-03-25 to 2006-03-25
+[Getting data:]####
+
+i am getting 2006-03-26 to 2007-03-25
+[Getting data:]####
+
+i am getting 2007-03-26 to 2008-03-24
+[Getting data:]####
+
+i am getting 2008-03-25 to 2009-03-24
+[Getting data:]####
+
+i am getting 2009-03-25 to 2010-03-24
+[Getting data:]####
+
+i am getting 2010-03-25 to 2011-03-24
+[Getting data:]####
+
+i am getting 2011-03-25 to 2012-03-23
+[Getting data:]####
+
+i am getting 2012-03-24 to 2013-03-23
+[Getting data:]####
+
+i am getting 2013-03-24 to 2014-03-23
+[Getting data:]####
+
+i am getting 2014-03-24 to 2015-03-23
+[Getting data:]####
+
+i am getting 2015-03-24 to 2016-03-22
+[Getting data:]####
+
+i am getting 2016-03-23 to 2017-03-22
+[Getting data:]####
+
+i am getting 2017-03-23 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:10:32 end to get quote data of: 002040   $$$$$$$$$$$$
+603630 already has quote in database.quit 
+300515 already has quote in database.quit 
+300420 already has quote in database.quit 
+603969 already has quote in database.quit 
+603578 already has quote in database.quit 
+603665 already has quote in database.quit 
+603656 already has quote in database.quit 
+300623 already has quote in database.quit 
+300622 already has quote in database.quit 
+002851 already has quote in database.quit 
+002845 already has quote in database.quit 
+603908 already has quote in database.quit 
+300628 already has quote in database.quit 
+300625 already has quote in database.quit 
+002853 already has quote in database.quit 
+603991 already has quote in database.quit 
+603960 already has quote in database.quit 
+600209 already has quote in database.quit 
+600161 already has quote in database.quit 
+002855 already has quote in database.quit 
+000560 already has quote in database.quit 
+603811 already has quote in database.quit 
+603955 already has quote in database.quit 
+603626 already has quote in database.quit 
+603138 already has quote in database.quit 
+300619 already has quote in database.quit 
+300618 already has quote in database.quit 
+300620 already has quote in database.quit 
+603322 already has quote in database.quit 
+603517 already has quote in database.quit 
+603822 already has quote in database.quit 
+603903 already has quote in database.quit 
+603966 already has quote in database.quit 
+603179 already has quote in database.quit 
+000672 already has quote in database.quit 
+002526 already has quote in database.quit 
+300621 already has quote in database.quit 
+002302 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:10:32 begin to get quote data of: 300631$$$$$$$$$$$$$$
+i am getting 2017-03-23 to 2017-03-25
+[Getting data:]
+
+$$$$$$$$$$$$   2017-03-25 12:10:38 end to get quote data of: 300631   $$$$$$$$$$$$
+000903 already has quote in database.quit 
+002516 already has quote in database.quit 
+601008 already has quote in database.quit 
+300607 already has quote in database.quit 
+002361 already has quote in database.quit 
+600896 already has quote in database.quit 
+002489 already has quote in database.quit 
+601231 already has quote in database.quit 
+601668 already has quote in database.quit 
+002808 already has quote in database.quit 
+002046 already has quote in database.quit 
+600698 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:10:38 begin to get quote data of: 600760$$$$$$$$$$$$$$
+i am getting 1996-10-11 to 1997-10-11
+[Getting data:]####
+
+i am getting 1997-10-12 to 1998-10-11
+[Getting data:]####
+
+i am getting 1998-10-12 to 1999-10-11
+[Getting data:]####
+
+i am getting 1999-10-12 to 2000-10-10
+[Getting data:]####
+
+i am getting 2000-10-11 to 2001-10-10
+[Getting data:]####
+
+i am getting 2001-10-11 to 2002-10-10
+[Getting data:]####
+
+i am getting 2002-10-11 to 2003-10-10
+[Getting data:]####
+
+i am getting 2003-10-11 to 2004-10-09
+[Getting data:]####
+
+i am getting 2004-10-10 to 2005-10-09
+[Getting data:]####
+
+test
+2017-03-25 12:31:20 begin to get quote data
+603768 already has quote in database.quit 
+603388 already has quote in database.quit 
+300629 already has quote in database.quit 
+002858 already has quote in database.quit 
+002774 already has quote in database.quit 
+600425 already has quote in database.quit 
+601002 already has quote in database.quit 
+300627 already has quote in database.quit 
+002856 already has quote in database.quit 
+002857 already has quote in database.quit 
+002696 already has quote in database.quit 
+002246 already has quote in database.quit 
+300626 already has quote in database.quit 
+603133 already has quote in database.quit 
+002040 already has quote in database.quit 
+603630 already has quote in database.quit 
+300515 already has quote in database.quit 
+300420 already has quote in database.quit 
+603969 already has quote in database.quit 
+603578 already has quote in database.quit 
+603665 already has quote in database.quit 
+603656 already has quote in database.quit 
+300623 already has quote in database.quit 
+300622 already has quote in database.quit 
+002851 already has quote in database.quit 
+002845 already has quote in database.quit 
+603908 already has quote in database.quit 
+300628 already has quote in database.quit 
+300625 already has quote in database.quit 
+002853 already has quote in database.quit 
+603991 already has quote in database.quit 
+603960 already has quote in database.quit 
+600209 already has quote in database.quit 
+600161 already has quote in database.quit 
+002855 already has quote in database.quit 
+000560 already has quote in database.quit 
+603811 already has quote in database.quit 
+603955 already has quote in database.quit 
+603626 already has quote in database.quit 
+603138 already has quote in database.quit 
+300619 already has quote in database.quit 
+300618 already has quote in database.quit 
+300620 already has quote in database.quit 
+603322 already has quote in database.quit 
+603517 already has quote in database.quit 
+603822 already has quote in database.quit 
+603903 already has quote in database.quit 
+603966 already has quote in database.quit 
+603179 already has quote in database.quit 
+000672 already has quote in database.quit 
+002526 already has quote in database.quit 
+300621 already has quote in database.quit 
+002302 already has quote in database.quit 
+300631 already has quote in database.quit 
+000903 already has quote in database.quit 
+002516 already has quote in database.quit 
+601008 already has quote in database.quit 
+300607 already has quote in database.quit 
+002361 already has quote in database.quit 
+600896 already has quote in database.quit 
+002489 already has quote in database.quit 
+601231 already has quote in database.quit 
+601668 already has quote in database.quit 
+002808 already has quote in database.quit 
+002046 already has quote in database.quit 
+600698 already has quote in database.quit 
+600760 already has quote in database.quit 
+603615 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:31:20 begin to get quote data of: 002384$$$$$$$$$$$$$$
+i am getting 2010-04-09 to 2011-04-09
+[Getting data:]####
+
+i am getting 2011-04-10 to 2012-04-08
+[Getting data:]####
+
+i am getting 2012-04-09 to 2013-04-08
+[Getting data:]####
+
+i am getting 2013-04-09 to 2014-04-08
+[Getting data:]####
+
+i am getting 2014-04-09 to 2015-04-08
+[Getting data:]####
+
+i am getting 2015-04-09 to 2016-04-07
+[Getting data:]####
+
+i am getting 2016-04-08 to 2017-03-25
+[Getting data:]###
+
+$$$$$$$$$$$$   2017-03-25 12:32:13 end to get quote data of: 002384   $$$$$$$$$$$$
+603039 already has quote in database.quit 
+603577 already has quote in database.quit 
+300475 already has quote in database.quit 
+300608 already has quote in database.quit 
+002757 already has quote in database.quit 
+600428 already has quote in database.quit 
+$$$$$$$$$$$$2017-03-25 12:32:13 begin to get quote data of: 000728$$$$$$$$$$$$$$
+i am getting 1997-06-16 to 1998-06-16
+[Getting data:]####
+
+i am getting 1998-06-17 to 1999-06-16
+[Getting data:]####
+
+i am getting 1999-06-17 to 2000-06-15
+[Getting data:]####
+
+i am getting 2000-06-16 to 2001-06-15
+[Getting data:]####
+
+i am getting 2001-06-16 to 2002-06-15
+[Getting data:]####
+
+i am getting 2002-06-16 to 2003-06-15
+[Getting data:]####
+
+i am getting 2003-06-16 to 2004-06-14
+[Getting data:]####
+
+i am getting 2004-06-15 to 2005-06-14
+[Getting data:]####
+
+i am getting 2005-06-15 to 2006-06-14
+[Getting data:]####
+
+i am getting 2006-06-15 to 2007-06-14
+[Getting data:]####
+
+i am getting 2007-06-15 to 2008-06-13
+[Getting data:]####
+
+i am getting 2008-06-14 to 2009-06-13
+[Getting data:]####
