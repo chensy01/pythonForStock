@@ -5,6 +5,7 @@ import tushare as ts
 import time,datetime
 
 allstock = ts.get_stock_basics()
+print "there are " + len(allstock) + " stocks total"
 
 allstock
 print 'test'
