@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 import tushare as ts
 import time,datetime
 
-
+engine = create_engine('mysql://jack:jack@127.0.0.1/jack?charset=utf8')
 def queryStockCount(stock):
 
 	conn = MySQLdb.connect(host='localhost', port= 3306, user='jack', passwd='jack',db='jack')
@@ -60,7 +60,7 @@ def downloadQuoteByStockAndDate(tRealbegin, tRealend, stock):
 
 		try:
 			df = ts.get_h_data(stock, start=strRealbegin, end=strRealend)
-			engine = create_engine('mysql://jack:jack@127.0.0.1/jack?charset=utf8')
+			
 			#存入数据库
 			#df.to_sql('tick_data',engine)
 			#追加数据到现有表
