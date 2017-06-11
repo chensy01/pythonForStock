@@ -5,16 +5,15 @@ import MySQLdb
 from sqlalchemy import create_engine
 import tushare as ts
 import time,datetime
+import pandas as pd
 
 engine = create_engine('mysql://jack:jack@127.0.0.1/jack?charset=utf8')
-<<<<<<< HEAD
-=======
 dbhostip='localhost'
 dbport=3306
 dbuser='jack'
 dbpasswd='jack'
 dbname='jack'
->>>>>>> 4b51e49681604773c1ce1760416c8742e2467cd3
+
 def queryStockCount(stock):
 
 	conn = MySQLdb.connect(host='localhost', port= 3306, user='jack', passwd='jack',db='jack')
@@ -137,3 +136,100 @@ def queryStockMaxTradeDateInDaily(stock):
 	if(maxDate[0] is None):
 		return  datetime.datetime(1986, 9, 30, 0, 0, 0, 0)
 	return maxDate[0] + datetime.timedelta(days=1)
+
+
+def getStockDailyQuote(stock):
+	result = pd.DataFrame()
+	try:
+		conn = MySQLdb.connect(host=dbhostip, port = dbport, user=dbuser, passwd=dbpasswd, db=dbname)
+		sqlcmd = "select * from stock_daily_quote_qfq where code = '" + stock + "'"
+		result = pd.read_sql(sqlcmd, con=conn)
+	except Exception as e:
+		print str(e)
+	else:
+		pass
+	finally:
+		conn.close()
+	return result
+
+
+def getAllStock():
+	result = pd.DataFrame()
+	try:
+		conn = MySQLdb.connect(host=dbhostip, port = dbport, user=dbuser, passwd=dbpasswd, db=dbname)
+		sqlcmd = "select distinct code from stock_daily_quote_qfq order by code"
+		result = pd.read_sql(sqlcmd, con=conn)
+	except Exception as e:
+		print 'error found:' + str(e)
+	finally:
+		pass
+	return result
+
+
+def getRecentlyQuoteByStock(stock,day):
+	result = pd.DataFrame()
+	try:
+		conn = MySQLdb.connect(host=dbhostip, port = dbport, user=dbuser, passwd=dbpasswd, db=dbname)
+		sqlcmd = "select * from ( " + "select * from stock_daily_quote_qfq where code = '" + stock + "' order by date desc" + ") a limit " + day
+		result = pd.read_sql(sqlcmd, con=conn)
+	except Exception as e:
+		print 'error found:' + str(e)
+	finally:
+		pass
+	return result
+
+
+def checkWanxiuQuote(stock,re,ratio):
+	re=re.sort_values(axis=0, by='date',ascending=True)  #需按照日期升序排列
+	index=len(re)-1
+	while index>1:
+		todayClose = re.iloc[index, 3]
+		todayOpen = re.iloc[index,2]
+		yesterdayClose = re.iloc[index-1,3]
+		yesterdayOpen = re.iloc[index-1,2]
+		yesterdayHigh = re.iloc[index-1,4]
+		yesterdayLow = re.iloc[index-1,5]
+		#print re.iloc[index,1]
+		#print 'todayClose:' + str(todayClose)
+		#print 'todayOpen:' + str(todayOpen)
+		#print 'yesterdayClose:' + str(yesterdayClose)
+		#print 'yesterdayOpen:' + str(yesterdayOpen)
+		#print 'yesterdayHigh:' + str(yesterdayHigh)
+		#print 'yesterdayLow:' + str(yesterdayLow)
+		#print ''
+		#当天与前一天的柱体必须为一阴一阳,且柱体高度相当
+		distance = abs(todayClose - todayOpen + yesterdayClose - yesterdayOpen) #柱体高度差
+		try:
+			total = abs(todayClose - todayOpen) #柱体高度
+			percentage = distance / total
+			#print re.iloc[index,1]
+		except Exception as e:
+			print stock + ' trade date:'  + re.iloc[index,1]  + 'has exception'
+			continue
+		except Warning as w:
+			print stock + ' trade date:' + re.iloc[index,1]  + 'has warnning'
+		finally:
+			pass
+		#柱体差异范围在10%之内,且柱体必须相交
+		#1、第一种形态的第一条图线为阳线，第二条图线为阴线，且阴线在前阳线的实体内开盘，在前一条线的最低价之下收盘。
+		#2、第二种形态的第一条图线为阴线，第二条图线为阳线，阳线在前阴线的实体内开盘，在前阴线的最高价之上收盘。
+		#if(percentage <= 0.1) and  ((todayClose < todayOpen and todayOpen > yesterdayOpen and todayOpen < yesterdayClose and todayClose < yesterdayLow) or (todayClose >todayOpen and todayOpen > yesterdayClose and todayOpen < yesterdayOpen and todayClose > yesterdayHigh)):
+		if((todayClose < todayOpen and todayOpen > yesterdayOpen and todayOpen < yesterdayClose and todayClose < yesterdayLow) or (todayClose >todayOpen and todayOpen > yesterdayClose and todayOpen < yesterdayOpen and todayClose > yesterdayHigh)):
+			if(judgePriceIsLow(stock,todayClose,ratio)):
+				print stock + ' trade date:' + str(re.iloc[index,1]) + ' is qualitified'
+		index = index-1	
+
+def judgePriceIsLow(stock,price,minestPriceRatio):
+	try:
+		conn = MySQLdb.connect(host=dbhostip, port = dbport, user=dbuser, passwd=dbpasswd, db=dbname)
+		sqlcmd = "select min(close) as lowest from stock_daily_quote_qfq where code = '" + stock + "'"
+		result = pd.read_sql(sqlcmd, con=conn)
+		lowest = result.iloc[0][0]
+		if((lowest * float(minestPriceRatio)) >= float(price)):
+			return True
+		else:
+			return False
+	except Exception as e:
+		print 'error found:' + str(e)
+	finally:
+		pass
