@@ -13,8 +13,5 @@ ratio=str(input('>'))
 re=co.getAllStock()
 for stock in re['code']:
 	re=co.getRecentlyQuoteByStock(stock,day)
-	co.checkWanxiuQuote(stock,re,ratio)
+	co.checkWanxiuQuoteXueQiu(stock,re,ratio)
 
-
-
-#print the stock k line
