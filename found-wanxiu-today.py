@@ -10,11 +10,16 @@ day=str(input('>'))
 print 'please input the ratio of lowest price:'
 ratio=str(input('>'))
 
+stocks=[]
 re=co.getAllStock()
 for stock in re['code']:
 	re=co.getRecentlyQuoteByStock(stock,day)
-	co.checkWanxiuQuote(stock,re,ratio)
+	result = co.checkWanxiuQuote(stock,re,ratio)
+	if (result):
+		stocks.append(stock)
 
 
 
-#print the stock k line
+path='/Users/momo/Programs/python/result/wanxiu/'
+co.printKlines(stocks, path)
+	

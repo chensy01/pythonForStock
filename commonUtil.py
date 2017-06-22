@@ -201,6 +201,7 @@ def getFullQuoteByStock(stock):
 def checkWanxiuQuote(stock,re,ratio):
 	re=re.sort_values(axis=0, by='date',ascending=True)  #需按照日期升序排列
 	index=len(re)-1
+	result = False
 	while index>1:
 		todayClose = re.iloc[index, 3]
 		todayOpen = re.iloc[index,2]
@@ -236,7 +237,9 @@ def checkWanxiuQuote(stock,re,ratio):
 		if((todayClose < todayOpen and todayOpen > yesterdayOpen and todayOpen < yesterdayClose and todayClose < yesterdayLow) or (todayClose >todayOpen and todayOpen > yesterdayClose and todayOpen < yesterdayOpen and todayClose > yesterdayHigh)):
 			if(judgePriceIsLow(stock,todayClose,ratio)):
 				print stock + ' trade date:' + str(re.iloc[index,1]) + ' is qualified'
+				result = True
 		index = index-1	
+	return result
 
 def checkWanxiuQuoteXueQiu(stock,re,ratio):
 	re=re.sort_values(axis=0, by='date',ascending=True)  #需按照日期升序排列
@@ -334,7 +337,7 @@ def tickline():
 	ax.plot(np.arange(11), np.zeros(11))
 	return ax
 
-def printKlines(stocks):
+def printKlines(stocks,savepath):
 	stockNum = len(stocks)
 	fig = plt.figure()
 	i = 1
@@ -360,7 +363,8 @@ def printKlines(stocks):
 		plt.title("STOCK:" +stock)
 		plt.xlabel("time")
 		plt.ylabel("price")
-		mpf.candlestick(ax,data_list,width=1.5,colorup='r',colordown='green') 
+		mpf.candlestick(ax,data_list,width=0.5,colorup='r',colordown='green') 
 		plt.grid()
 		i=i+1
-	plt.savefig('/Users/momo/Programs/python/result/' + stock + '.png')
+	plt.show()
+	plt.savefig(savepath + datetime.datetime.now().strftime('%Y-%m-%d') + '.png')
