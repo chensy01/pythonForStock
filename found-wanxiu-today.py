@@ -1,6 +1,8 @@
 #!/usr/bin/python2.7
 # -*- coding:utf-8 -*-  
 import commonUtil as co
+import mailUtil as mu
+import time,datetime
 
 
 #print stock
@@ -19,7 +21,17 @@ for stock in re['code']:
 		stocks.append(stock)
 
 
-
-path='/Users/momo/Programs/python/result/wanxiu/'
-co.printKlines(stocks, path)
+if(len(stocks) > 0):
+	path='/Users/momo/Programs/python/result/wanxiu/'
+	fileName=datetime.datetime.now().strftime('%Y-%m-%d') + '.png'
+	co.printKlines(stocks, path,fileName)
+	if(mu.send_mail_with_attach("wanxiu","autosend",path + fileName,fileName)):
+		print('mail sent success')
+	else:
+		print('mail sent fail')
+else:
+	if(mu.send_mail_without_attach("wanxiu","notfound")):
+		print('mail sent success')
+	else:
+		print('mail sent fail')
 	

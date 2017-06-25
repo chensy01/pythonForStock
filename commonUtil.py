@@ -337,9 +337,10 @@ def tickline():
 	ax.plot(np.arange(11), np.zeros(11))
 	return ax
 
-def printKlines(stocks,savepath):
+def printKlines(stocks,savepath,fileName):
 	stockNum = len(stocks)
 	fig = plt.figure()
+	fig.set_size_inches(18.5, 18.5)
 	i = 1
 	for stock in stocks:
 
@@ -358,13 +359,14 @@ def printKlines(stocks,savepath):
 		ax = fig.add_subplot(stockNum, 1, i)
 		#fig.subplots_adjust(bottom=0.2)
 		ax.xaxis_date()
-		plt.xticks(rotation=45)
+		#plt.xticks(rotation=45)
+		plt.xticks()
 		plt.yticks()
 		plt.title("STOCK:" +stock)
 		plt.xlabel("time")
 		plt.ylabel("price")
-		mpf.candlestick(ax,data_list,width=0.5,colorup='r',colordown='green') 
+		mpf.candlestick(ax,data_list,width=1,colorup='r',colordown='green') 
 		plt.grid()
 		i=i+1
-	plt.show()
-	plt.savefig(savepath + datetime.datetime.now().strftime('%Y-%m-%d') + '.png')
+	#plt.show()
+	plt.savefig(savepath + fileName, dpi=100)
